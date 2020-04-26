@@ -10,3 +10,22 @@ wget http://archive.raspberrypi.org/debian/pool/main/r/rpi-update/rpi-update_202
 dpkg -i raspi-config_20200226_all.deb
 dpkg -i rpi-update_20200409_all.deb
 apt-get -f install 
+localectl set-locale LANG=en_US.UTF-8
+localectl set-locale LANGUAGE=en_US
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/US/Central /etc/localtime
+
+On first boot, I got an unpleasant flickering default display setup with a large black border around the entire display.
+
+To fix this edit /boot/config.txt
+
+Uncomment this line near the top to get rid of the black borders:
+disable_overscan=1
+
+Then toward the bottom there is a second "[pi4]" block that isn't commented (again, this is for a Pi4). In this block uncomment:
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
+Too Restart:
+shutdown -r now
+
