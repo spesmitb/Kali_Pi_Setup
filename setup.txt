@@ -29,3 +29,11 @@ max_framebuffers=2
 Too Restart:
 shutdown -r now
 
+If ethernet down:
+Goto vi /etc/NetworkManager/NetworkManger.conf
+
+Change:
+managed=false to managed=true
+
+Restart service:
+/etc/init.d/network-manager restart
