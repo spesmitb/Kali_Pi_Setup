@@ -4,7 +4,7 @@ apt-get install python-dev python3-dev RPi.GPIO
 curl https://bootstrap.pypa.io/get-pip.py | python
 pip install smbus
 apt-get install i2c-tools 
-apt-get install lua5.1 alsa-utils triggerhappy curl libcurl3
+apt-get install lua5.1 alsa-utils triggerhappy curl libcurl4
 wget http://archive.raspberrypi.org/debian/pool/main/r/raspi-config/raspi-config_20200226_all.deb
 wget http://archive.raspberrypi.org/debian/pool/main/r/rpi-update/rpi-update_20200409_all.deb
 dpkg -i raspi-config_20200226_all.deb
