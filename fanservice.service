@@ -1,0 +1,11 @@
+[Unit]
+Description=Argon One Fan Service
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+RemaianAfterExit=true
+ExecStart=/usr/bin/python /opt/fanservice/bin/fan.py
+[Install]
+WantedBy=multi-user.target
+
