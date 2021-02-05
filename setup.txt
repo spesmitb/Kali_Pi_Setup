@@ -5,9 +5,9 @@ curl https://bootstrap.pypa.io/get-pip.py | python
 pip install smbus
 apt-get install i2c-tools 
 apt-get install lua5.1 alsa-utils triggerhappy curl libcurl4
-wget http://archive.raspberrypi.org/debian/pool/main/r/raspi-config/raspi-config_20200226_all.deb
+wget http://archive.raspberrypi.org/debian/pool/main/r/raspi-config/raspi-config_20210119_all.deb
 wget http://archive.raspberrypi.org/debian/pool/main/r/rpi-update/rpi-update_20200409_all.deb
-dpkg -i raspi-config_20200226_all.deb
+dpkg -i raspi-config_20210119_all.deb
 dpkg -i rpi-update_20200409_all.deb
 apt-get -f install 
 localectl set-locale LANG=en_US.UTF-8
